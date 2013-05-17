@@ -22,7 +22,7 @@ class BasicExampleApp : public AppNative {
     bool                        bDrawIcon;
     float                       mBgColor;
     Spacebrew::Connection       mSpacebrew;
-    gl::Texture                 mTex;
+    gl::TextureRef              mTex;
 };
 
 void BasicExampleApp::prepareSettings(cinder::app::App::Settings *settings) {
@@ -34,7 +34,7 @@ void BasicExampleApp::setup() {
     
     bDrawIcon   = true;
     mBgColor    = 0.0f;
-    mTex        = gl::Texture( loadImage( loadAsset("cinderIcon.png") ) );
+    mTex        = gl::Texture::create( loadImage( loadAsset("cinderIcon.png") ) );
     
     string host = "ws://localhost:" + toString( Spacebrew::SPACEBREW_PORT );
     string name = "cinder-button-example";

@@ -7,7 +7,7 @@
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample</string>
 	</array>
 	<key>LastWorkingCopyScanDate</key>
-	<date>2013-05-17T16:16:54Z</date>
+	<date>2013-05-17T18:19:47Z</date>
 	<key>MissingFilePaths</key>
 	<array>
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/WebSocketClient.h</string>
@@ -19,7 +19,6 @@
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/websocketpp/close.hpp</string>
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/websocketpp/frame.hpp</string>
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/websocketpp/client.hpp</string>
-		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/src/BasicExampleApp.cpp</string>
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/websocketpp/endpoint_base.hpp</string>
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/websocketpp/error_container.hpp</string>
 		<string>/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/blocks/Cinder-WebSocketPP/src/websocketpp/endpoint.hpp</string>
