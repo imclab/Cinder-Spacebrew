@@ -1,0 +1,302 @@
+TBasicExample
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Info.plist Info.plist
+cCpResource ../resources/CinderApp.icns ./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icns
+cProcessPCH++ /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.pth BasicExample_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c0000000051894AC000000000000000AA
+t1367952064
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c0000000050B7FA4800000000000024F0
+t1354234440
+s9456
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c0000000051894AAC0000000000024DD8
+t1367952044
+s151000
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
+c0000000051894AAC00000000000060B4
+t1367952044
+s24756
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000050B7FA4900000000000001E5
+t1354234441
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c0000000051894AAC000000000000E9A8
+t1367952044
+s59816
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c00000000500B62FD0000000000006730
+t1342923517
+s26416
+
+N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c00000000507C67250000000000081CB0
+t1350330149
+s531632
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c00000000507C6742000000000002DAF0
+t1350330178
+s187120
+
+N/System/Library/Frameworks/QTKit.framework/QTKit
+c00000000507C674C00000000004A2D90
+t1350330188
+s4861328
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp
+c00000000519531F50000000000000E30
+t1368732149
+s3632
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp
+c00000000519531F500000000000032C1
+t1368732149
+s12993
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../resources/CinderApp.icns
+c00000000519531F50000000000070375
+t1368732149
+s459637
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp
+c00000000519533890000000000000450
+t1368732553
+s1104
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExample.LinkFileList
+c000000005195338B0000000000000311
+t1368732555
+s785
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.o
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.o
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.o
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.o
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Info.plist
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/MacOS/BasicExample
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icns
+t2
+s0
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/BasicExample_Prefix.pch
+c00000000519531F5000000000000012D
+t1368732149
+s301
+i<Cocoa/Cocoa.h>
+i"cinder/Cinder.h"
+i"cinder/app/AppBasic.h"
+i"cinder/gl/gl.h"
+i"cinder/CinderMath.h"
+i"cinder/Matrix.h"
+i"cinder/Vector.h"
+i"cinder/Quaternion.h"
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp
+c000000005193D4B00000000000002D6E
+t1368642736
+s11630
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/Cinder.h
+c0000000051896B1C0000000000000CEB
+t1367960348
+s3307
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/CinderMath.h
+c0000000051896B1C0000000000001F9C
+t1367960348
+s8092
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/Matrix.h
+c0000000051896B1C0000000000000EDD
+t1367960348
+s3805
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/Quaternion.h
+c0000000051896B1C0000000000005499
+t1367960348
+s21657
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/Vector.h
+c0000000051896B1C000000000000AD7C
+t1367960348
+s44412
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/app/AppBasic.h
+c0000000051896B1C0000000000002262
+t1367960348
+s8802
+
+N/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/include/cinder/gl/gl.h
+c0000000051896B1C0000000000006469
+t1367960348
+s25705
+
+N/var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.pth
+t2
+s0
+
+NInfo.plist
+c00000000519531F50000000000000462
+t1368732149
+s1122
+
+CBuild AST from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp
+r0
+
+CBuild AST from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp
+r0
+
+CBuild AST from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp
+r0
+
+CBuild AST from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesdafea90b6b45b741^382cb10b6b45b741^---0#1#0#--18"Check dependencies36"4137A641-559D-4D99-A259-16F776831AF3-
+
+CCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390425358.595669
+e390425359.264774
+r0
+xCompileC
+x./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.o
+x/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp:4:
+o/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.h:14:14: fatal error: 'ofxLibwebsockets.h' file not found
+o    #include "ofxLibwebsockets.h"
+o             ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Compile /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp0f97980e6b45b741^0dc3430f6b45b741^-410"In file included from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp:4:/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.h:14:14: fatal error: 'ofxLibwebsockets.h' file not found    #include "ofxLibwebsockets.h"             ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@35"'ofxLibwebsockets.h' file not found-390425359#18446744073709551615#0#1(2@161"In file included from /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp:4:-390425359#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@143"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/src/BasicExampleApp.cpp0000000000000000^3#9#3#9#70#0#21"Clang LLVM 1.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@139"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.h0000000000000000^13#13#13#13#223#0#29"Lexical or Preprocessor Issue--0#0#0#-19%DVTDocumentLocation4@152"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp0000000000000000^3196"CompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.o ../src/BasicExampleApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/BasicExample.hmap -I../../../../../include -I../include -I../blocks/Cinder-WebSocketPP/src -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug/include -I../../../../../boost -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources/i386 -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources -F/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug -include /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch -MMD -MT dependencies -MF /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.d --serialize-diagnostics /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.dia -c /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../src/BasicExampleApp.cpp -o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/BasicExampleApp.o36"923369C8-6606-4515-A359-C084F0EB2AD8-
+
+CCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390425358.595677
+e390425363.597789
+r1
+xCompileC
+x./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.o
+x/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection170"Compile /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp399d980e6b45b741^350a99136b45b741^---0#0#0#-19%DVTDocumentLocation2@178"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp0000000000000000^3248"CompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.o ../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/BasicExample.hmap -I../../../../../include -I../include -I../blocks/Cinder-WebSocketPP/src -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug/include -I../../../../../boost -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources/i386 -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources -F/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug -include /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch -MMD -MT dependencies -MF /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.d --serialize-diagnostics /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.dia -c /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/WebSocketClient.cpp -o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/WebSocketClient.o36"54486361-9B55-479F-B35B-7F6591005DE9-
+
+CCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390425358.595684
+e390425359.365891
+r0
+xCompileC
+x./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.o
+x/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp:9:10: fatal error: 'ofxSpacebrew.h' file not found
+o#include "ofxSpacebrew.h"
+o         ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Compile /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp0f97980e6b45b741^bdac5d0f6b45b741^-233"/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp:9:10: fatal error: 'ofxSpacebrew.h' file not found#include "ofxSpacebrew.h"         ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp0000000000000000^3158"CompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.o ciSpacebrew.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/BasicExample.hmap -I../../../../../include -I../include -I../blocks/Cinder-WebSocketPP/src -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug/include -I../../../../../boost -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources/i386 -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources -F/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug -include /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch -MMD -MT dependencies -MF /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.d --serialize-diagnostics /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.dia -c /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/ciSpacebrew.cpp -o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/ciSpacebrew.o36"BD0DB6D9-7385-4D5A-8735-A0371F55A31A-
+
+CCompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390425358.595692
+e390425359.365820
+r1
+xCompileC
+x./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.o
+x/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection176"Compile /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp6b9d980e6b45b741^61aa5d0f6b45b741^---0#0#0#-19%DVTDocumentLocation2@184"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp0000000000000000^3216"CompileC ./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.o ../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/BasicExample.hmap -I../../../../../include -I../include -I../blocks/Cinder-WebSocketPP/src -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug/include -I../../../../../boost -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources/i386 -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources -F/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug -include /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch -MMD -MT dependencies -MF /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.d --serialize-diagnostics /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.dia -c /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../blocks/Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp -o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/Objects-normal/i386/sha1.o36"DD9C2669-A2F7-450F-9E07-F3F4D4BDD111-
+
+CCpResource ../resources/CinderApp.icns ./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icns
+s390425355.711090
+e390425355.719770
+r1
+xCpResource
+x../resources/CinderApp.icns
+x./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy ./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icnsce1cb60b6b45b741^4242b80b6b45b741^---0#0#0#-19%DVTDocumentLocation2@190"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icns000000000080d041^631"CpResource ../resources/CinderApp.icns ./build/Debug/BasicExample.app/Contents/Resources/CinderApp.icns    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/../resources/CinderApp.icns /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Resources36"935B2C75-2D4C-4E50-A355-38FB0D5EE672-
+
+CLd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/MacOS/BasicExample normal i386
+r0
+
+CProcessInfoPlistFile /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Info.plist Info.plist
+s390425355.697585
+e390425355.700309
+r1
+xProcessInfoPlistFile
+x/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Info.plist
+xInfo.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plistf8a5b20b6b45b741^745eb30b6b45b741^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/Info.plist0000000000000000^612"ProcessInfoPlistFile ./build/Debug/BasicExample.app/Contents/Info.plist Info.plist    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app/Contents/Info.plist36"277CDDC3-7EAA-4B3D-B004-AE13C8AC2349-
+
+CProcessPCH++ /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/DerivedData/BasicExample/Index/PrecompiledHeaders/BasicExample_Prefix-fyoleozdvqchojcygcgdresyxvge_ast/BasicExample_Prefix.pch.pth BasicExample_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.pth BasicExample_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390425355.727796
+e390425358.588689
+r1
+xProcessPCH++
+x/var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.pth
+xBasicExample_Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Precompile BasicExample_Prefix.pchdf6dba0b6b45b741^5bb6960e6b45b741^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/BasicExample_Prefix.pch0000000000000000^3015"ProcessPCH++ /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.pth BasicExample_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/BasicExample.hmap -I../../../../../include -I../include -I../blocks/Cinder-WebSocketPP/src -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug/include -I../../../../../boost -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources/i386 -I/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/BasicExample.build/Debug/BasicExample.build/DerivedSources -F/Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/build/Debug --serialize-diagnostics /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.dia -c /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/BasicExample_Prefix.pch -o /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/4b/t87qk6g11yxfydnn4z_qkbtr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/BasicExample_Prefix-cnromruqwtdfwmbrpvetmxhmbumh/BasicExample_Prefix.pch.d36"29C2A1B5-31A9-449C-B401-E28A4DBC1407-
+
+CTouch /Users/charlie/Documents/Development/_libs/cpp/Cinder_085/blocks/Cinder-Spacebrew/examples/BasicExample/xcode/./build/Debug/BasicExample.app
+r0
+
