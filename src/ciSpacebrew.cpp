@@ -102,38 +102,43 @@ namespace Spacebrew {
     
     //--------------------------------------------------------------
     Connection::Connection(){
-        bConnected = false;
-        
-        console() << "Adding callbacks " << endl;
-    #ifdef SPACEBREW_USE_OFX_LWS
+        bConnected  = false;
+        bSetup      = false;
+    
         mClient.addConnectCallback( &Connection::onConnect, this );
         mClient.addDisconnectCallback( &Connection::onDisconnect, this );
         mClient.addErrorCallback( &Connection::onError, this );
         mClient.addInterruptCallback( &Connection::onInterrupt, this );
         mClient.addPingCallback( &Connection::onPing, this );
         mClient.addReadCallback( &Connection::onRead, this );
-    #endif
-
-//        ofAddListener( ofEvents().update, this, &Connection::update );
+        
         reconnectInterval = 2000;
         bAutoReconnect    = false;
+    }
+    
+    void Connection::setup() {
+        if( bSetup ){
+            return;
+        }
+        
+        ci::app::App::get()->getSignalUpdate().connect( boost::bind( &Connection::update, this ) );
+        
+        bSetup = true;
     }
 
     //--------------------------------------------------------------
     Connection::~Connection(){
         bConnected = false;
         bAutoReconnect = false;
-//        ofRemoveListener( ofEvents().update, this, &Connection::update );
         
-#ifdef SPACEBREW_USE_OFX_LWS
         mClient.disconnect();
-#endif
+        
+        ci::app::App::get()->getSignalUpdate().disconnect( boost::bind( &Connection::update, this ) );
     }
     
     //--------------------------------------------------------------
     void Connection::update(){
-        mClient.poll();
-        
+        mClient.poll();        
 
         if ( bAutoReconnect ){
             if ( !bConnected && getElapsedSeconds() * 1000 - lastTimeTriedConnect > reconnectInterval ){
@@ -145,34 +150,29 @@ namespace Spacebrew {
 
     //--------------------------------------------------------------
     void Connection::connect( string _host, string name, string description){
+        setup();
+        
         host = _host;
         config.name = name;
         config.description = description;
-
-    #ifdef SPACEBREW_USE_OFX_LWS
-        
-        string addr = "ws://" + host + ":" + toString(SPACEBREW_PORT);
-        
-        console() << "Attempting connection :: " << addr << endl;
-        mClient.connect( addr );
-    #endif
+//        string addr = "ws://" + host + ":" + toString(SPACEBREW_PORT);
+        mClient.connect( host );
     }
     
     //--------------------------------------------------------------
     void Connection::connect( string host, Config _config ){
+        setup();
+        
         config = _config;
-        string addr = "ws://" + host + ":" + toString(SPACEBREW_PORT);
-        console() << "Attempting connection :: " << addr << endl;
-    #ifdef SPACEBREW_USE_OFX_LWS
-        mClient.connect( addr );
-    #endif
+//        string addr = "ws://" + host + ":" + toString(SPACEBREW_PORT);
+        mClient.connect( host );
     }
     
     //--------------------------------------------------------------
     void Connection::send( string name, string type, string value ){
         if ( bConnected ){
             Message m( name, type, value);
-            send(m);
+			send(m);
         } else {
             console() << "Send failed, not connected!" << endl;
         }
@@ -211,25 +211,21 @@ namespace Spacebrew {
 
     //--------------------------------------------------------------
     void Connection::send( Message m ){
-        if ( bConnected ){
-        #ifdef SPACEBREW_USE_OFX_LWS
+		if ( bConnected ){
             mClient.write( m.getJSON( config.name ) );
-        #endif
         } else {
             console() << "Send failed, not connected!" << endl;
         }
-    }
+	}
 
     //--------------------------------------------------------------
     void Connection::send( Message * m ){
-        if ( bConnected ){
-        #ifdef SPACEBREW_USE_OFX_LWS
+		if ( bConnected ){
             mClient.write( m->getJSON( config.name ) );
-        #endif
         } else {
             console() << "Send failed, not connected!" << endl;
         }
-    }
+	}
     
     //--------------------------------------------------------------
     void Connection::addSubscribe( string name, string type ){
@@ -290,41 +286,40 @@ namespace Spacebrew {
 
     //--------------------------------------------------------------
     void Connection::updatePubSub(){
-#ifdef SPACEBREW_USE_OFX_LWS
         mClient.write( config.getJSON() );
-#endif
     }
     
     //--------------------------------------------------------------
     string Connection::getHost(){
         return host;
     }
-
-#ifdef SPACEBREW_USE_OFX_LWS
     
     //--------------------------------------------------------------
     void Connection::onConnect(){
-        console() << "Connected!" << endl;
         bConnected = true;
         updatePubSub();
+        signalOnConnect();
     }
     
     //--------------------------------------------------------------
     void Connection::onDisconnect(){
         bConnected = false;
         lastTimeTriedConnect = getElapsedSeconds() * 1000;
+        signalOnDisconnect();
     }
     
     void Connection::onError( std::string msg ) {
         console() << "Error :: " << msg << endl;
+        
+        signalOnError( msg );
     }
     
     void Connection::onPing() {
-        
+        signalOnPing();
     }
     
     void Connection::onInterrupt() {
-        
+        signalOnInterrupt();
     }
     
     //--------------------------------------------------------------
@@ -332,39 +327,15 @@ namespace Spacebrew {
     
     //--------------------------------------------------------------
     void Connection::onRead( std::string msg ){
-        console() << "I received a message!" << endl;
-        /*
-        if ( !args.json.isNull() ){
-            Message m;
-            m.name = args.json["message"]["name"].asString();
-            m.type = args.json["message"]["type"].asString();
-            
-            string type = args.json["message"]["type"].asString();
-            if ( type == "string" && args.json["message"]["value"].isString()){
-                m.value = args.json["message"]["value"].asString();
-            } else if ( type == "boolean" ){
-                if ( args.json["message"]["value"].isInt() ){
-                    m.value = ofToString( args.json["message"]["value"].asInt());
-                } else if ( args.json["message"]["value"].isString() ){
-                    m.value = args.json["message"]["value"].asString();
-                }
-            } else if ( type == "number" ){
-                if ( args.json["message"]["value"].isInt() ){
-                    m.value = ofToString( args.json["message"]["value"].asInt());
-                } else if ( args.json["message"]["value"].isString() ){
-                    m.value = args.json["message"]["value"].asString();
-                }
-            } else {
-                stringstream s; s<<args.json["message"]["value"];
-                m.value = s.str();
-            }
-            
-            if ( bConnected ) ofNotifyEvent(onMessageEvent, m, this);
-        }
-         */
+        JsonTree j( msg );
+    
+        Message m;
+        m.name = j.getChild("message").getChild("name").getValue();
+        m.type = j.getChild("message").getChild("type").getValue();
+        m.value = j.getChild("message").getChild("value").getValue();
+        
+        signalOnMessage( m );
     }
     
     //--------------------------------------------------------------
-
-#endif
 }

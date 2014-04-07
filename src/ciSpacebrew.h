@@ -3,21 +3,18 @@
 //  ofxSpacebrew
 //
 //  Created by Brett Renfer on 8/17/12.
-//
+//  Cinder port Charlie Whitney
 //
 
 #pragma once
 
-#define SPACEBREW_USE_OFX_LWS // prepping to use with a different ws:// library
-
-#ifdef SPACEBREW_USE_OFX_LWS
-    #include "WebSocketClient.h"
-#else
-#endif
+#include "WebSocketClient.h"
 
 #include "cinder/Utilities.h"
 #include "cinder/Json.h"
 #include "cinder/CinderMath.h"
+
+#include <boost/signals2.hpp>
 
 using namespace ci;
 using namespace ci::app;
@@ -37,52 +34,52 @@ namespace Spacebrew {
      * @class Spacebrew::Message
      */
     class Message {
-        public:
+      public:
+    
+        /** @constructor */
+        Message( string _name="", string _type="", string _val="");
+        virtual string getJSON( string configName );
         
-            /** @constructor */
-            Message( string _name="", string _type="", string _val="");
-            virtual string getJSON( string configName );
-            
-            /**
-             * @brief Name of Message
-             * @type {std::string}
-             */
-            string name;
+        /**
+         * @brief Name of Message
+         * @type {std::string}
+         */
+        string name;
 
-            /**
-             * @brief Message type ("string", "boolean", "range", or custom type)
-             * @type {std::string}
-             */
-            string type;
+        /**
+         * @brief Message type ("string", "boolean", "range", or custom type)
+         * @type {std::string}
+         */
+        string type;
 
-            /**
-             * @brief Default value
-             * @type {std::string}
-             */
-            string _default;
+        /**
+         * @brief Default value
+         * @type {std::string}
+         */
+        string _default;
 
-            /**
-             * @brief Current value (cast to string)
-             * @type {std::string}
-             */
-            string value;
-        
-            /**
-             * @brief Get your incoming value as a boolean
-             */
-            bool    valueBoolean();
-        
-            /**
-             * @brief Get your incoming value as a range (0-1023)
-             */
-            int     valueRange();
-        
-            /**
-             * @brief Get your incoming value as a string
-             */
-            string    valueString();
-        
-            friend ostream& operator<<(ostream& os, const Message& vec);
+        /**
+         * @brief Current value (cast to string)
+         * @type {std::string}
+         */
+        string value;
+    
+        /**
+         * @brief Get your incoming value as a boolean
+         */
+        bool    valueBoolean();
+    
+        /**
+         * @brief Get your incoming value as a range (0-1023)
+         */
+        int     valueRange();
+    
+        /**
+         * @brief Get your incoming value as a string
+         */
+        string    valueString();
+    
+        friend ostream& operator<<(ostream& os, const Message& vec);
     };
     
     inline ostream& operator<<(ostream& os, const Message& m) {
@@ -96,23 +93,23 @@ namespace Spacebrew {
      * @class Spacebrew::Config
      */
     class Config {
-        public:
+      public:
             
-            // see documentation below
-            // docs left out here to avoid confusion. Most people will use these methods
-            // on Spacebrew::Connection directly
-            void addSubscribe( string name, string type );
-            void addSubscribe( Message m );
-            void addPublish( string name, string type, string def);
-            void addPublish( Message m );
-            
-            string getJSON();
-            string name, description;
-            
-        private:
-            
-            vector<Message> publish;
-            vector<Message> subscribe;
+        // see documentation below
+        // docs left out here to avoid confusion. Most people will use these methods
+        // on Spacebrew::Connection directly
+        void addSubscribe( string name, string type );
+        void addSubscribe( Message m );
+        void addPublish( string name, string type, string def);
+        void addPublish( Message m );
+        
+        string getJSON();
+        string name, description;
+        
+      private:
+        
+        vector<Message> publish;
+        vector<Message> subscribe;
     };
     
     /**
@@ -121,172 +118,162 @@ namespace Spacebrew {
      * @class Spacebrew::Connection
      */
     class Connection {
-        public:
-            Connection();
-            ~Connection();
+      public:
+        Connection();
+        ~Connection();
+    
+        void setup();
+        bool bSetup;
+    
+        /**
+         * @brief Connect to Spacebrew. Pass empty values to connect to default host as "openFrameworks" app 
+         * (use only for testing!)
+         * @param {std::string} host        Host to connect to (e.g. "localhost", SPACEBREW_CLOUD ). Can be IP address OR hostname
+         * @param {std::string} name        Name of your app (shows up in Spacebrew admin)
+         * @param {std::string} description What does your app do?
+         */
+        void connect( string host = SPACEBREW_CLOUD, string name = "cinder app", string description = "");
+        void connect( string host, Config _config );
         
-            /**
-             * @brief Connect to Spacebrew. Pass empty values to connect to default host as "openFrameworks" app 
-             * (use only for testing!)
-             * @param {std::string} host        Host to connect to (e.g. "localhost", SPACEBREW_CLOUD ). Can be IP address OR hostname
-             * @param {std::string} name        Name of your app (shows up in Spacebrew admin)
-             * @param {std::string} description What does your app do?
-             */
-            void connect( string host = SPACEBREW_CLOUD, string name = "cinder app", string description = "");
-            void connect( string host, Config _config );
-            
-            /**
-             * @brief Send a message
-             * @param {std::string} name    Name of message
-             * @param {std::string} type    Message type ("string", "boolean", "range", or custom type)
-             * @param {std::string} value   Value (cast to string)
-             */
-            void send( string name, string type, string value );
+        /**
+         * @brief Send a message
+         * @param {std::string} name    Name of message
+         * @param {std::string} type    Message type ("string", "boolean", "range", or custom type)
+         * @param {std::string} value   Value (cast to string)
+         */
+        void send( string name, string type, string value );
 
-            /**
-             * @brief Send a string message
-             * @param {std::string} name    Name of message
-             * @param {std::string} value   Value
-             */
-            void sendString( string name, string value );
+        /**
+         * @brief Send a string message
+         * @param {std::string} name    Name of message
+         * @param {std::string} value   Value
+         */
+        void sendString( string name, string value );
 
-            /**
-             * @brief Send a range message
-             * @param {std::string} name    Name of message
-             * @param {int}         value   Value
-             */
-            void sendRange( string name, int value );
+        /**
+         * @brief Send a range message
+         * @param {std::string} name    Name of message
+         * @param {int}         value   Value
+         */
+        void sendRange( string name, int value );
 
-            /**
-             * @brief Send a boolean message
-             * @param {std::string} name    Name of message
-             * @param {bool}        value   Value
-             */
-            void sendBoolean( string name, bool value );
+        /**
+         * @brief Send a boolean message
+         * @param {std::string} name    Name of message
+         * @param {bool}        value   Value
+         */
+        void sendBoolean( string name, bool value );
 
-            /**
-             * Send a Spacebrew Message object
-             * @param {Spacebrew::Message} m
-             */
-            void send( Message m );
+        /**
+         * Send a Spacebrew Message object
+         * @param {Spacebrew::Message} m
+         */
+        void send( Message m );
 
-            /**
-             * @brief Send a Spacebrew Message object. Use this method if you've overridden Spacebrew::Message
-             * (especially) if you've created a custom getJson() method!)
-             * @param {Spacebrew::Message} m
-             */
-            void send( Message * m );
+        /**
+         * @brief Send a Spacebrew Message object. Use this method if you've overridden Spacebrew::Message
+         * (especially) if you've created a custom getJson() method!)
+         * @param {Spacebrew::Message} m
+         */
+        void send( Message * m );
+    
+        /**
+         * @brief Add a message that you want to subscribe to
+         * @param {std::string} name    Name of message
+         * @param {std::string} type    Message type ("string", "boolean", "range", or custom type)
+         */
+        void addSubscribe( string name, string type );
+
+        /**
+         * @brief Add a message that you want to subscribe to
+         * @param {Spacebrew::Message} m
+         */
+        void addSubscribe( Message m );
         
-            /**
-             * @brief Add a message that you want to subscribe to
-             * @param {std::string} name    Name of message
-             * @param {std::string} type    Message type ("string", "boolean", "range", or custom type)
-             */
-            void addSubscribe( string name, string type );
+        /**
+         * @brief Add message of specific name + type to publish
+         * @param {std::string} name Name of message
+         * @param {std::string} typ  Message type ("string", "boolean", "range", or custom type)
+         * @param {std::string} def  Default value
+         */
+        void addPublish( string name, string type, string def="");
 
-            /**
-             * @brief Add a message that you want to subscribe to
-             * @param {Spacebrew::Message} m
-             */
-            void addSubscribe( Message m );
-            
-            /**
-             * @brief Add message of specific name + type to publish
-             * @param {std::string} name Name of message
-             * @param {std::string} typ  Message type ("string", "boolean", "range", or custom type)
-             * @param {std::string} def  Default value
-             */
-            void addPublish( string name, string type, string def="");
+        /**
+         * @brief Add message to publish
+         * @param {Spacebrew::Message} m
+         */
+        void addPublish( Message m );
 
-            /**
-             * @brief Add message to publish
-             * @param {Spacebrew::Message} m
-             */
-            void addPublish( Message m );
+        /**
+         * @return Current Spacebrew::Config (list of publish/subscribe, etc)
+         */
+        Config * getConfig();
+    
+        /**
+         * @return Are we connected?
+         */
+        bool isConnected();
 
-            /**
-             * @brief ofEvent to subscribe to!
-             * @example ofAddListener(spacebrew.onMessageEvent, this, &testApp::onMessage);
-             * void testApp::onMessage( Spacebrew::Message & m ){ 
-             *     cout<< m.value << endl; 
-             * };
-             */
-//            ofEvent<Message> onMessageEvent;
+        /**
+         * @brief Turn on/off auto reconnect (try to connect when/if Spacebrew server closes)
+         * @param {boolean} bAutoReconnect (true by default)
+         */
+        void setAutoReconnect( bool bAutoReconnect=true );
 
-            /**
-             * @return Current Spacebrew::Config (list of publish/subscribe, etc)
-             */
-            Config * getConfig();
-        
-            /**
-             * @return Are we connected?
-             */
-            bool isConnected();
+        /**
+         * @brief How often should we try to reconnect if auto-reconnect is on (defaults to 1 second [1000 millis])
+         * @param {int} reconnectMillis How often to reconnect, in milliseconds
+         */
+        void setReconnectRate( int reconnectMillis );
 
-            /**
-             * @brief Turn on/off auto reconnect (try to connect when/if Spacebrew server closes)
-             * @param {boolean} bAutoReconnect (true by default)
-             */
-            void setAutoReconnect( bool bAutoReconnect=true );
+        /**
+         * @return Are we trying to auto-reconnect?
+         */
+        bool doesAutoReconnect();
 
-            /**
-             * @brief How often should we try to reconnect if auto-reconnect is on (defaults to 1 second [1000 millis])
-             * @param {int} reconnectMillis How often to reconnect, in milliseconds
-             */
-            void setReconnectRate( int reconnectMillis );
-
-            /**
-             * @return Are we trying to auto-reconnect?
-             */
-            bool doesAutoReconnect();
-
-            /**
-             * @return Current hostname
-             */
-            string getHost();
+        /**
+         * @return Current hostname
+         */
+        string getHost();
+    
+        void				connect();
+        void				disconnect();
+    
+        void				onConnect();
+        void				onDisconnect();
+        void				onError( std::string msg );
+        void				onInterrupt();
+        void				onPing();
+        void				onRead( std::string msg );
+        void				write();
+    
+        void                update();
+    
+        boost::signals2::signal<void(Message)>  signalOnMessage;
+        boost::signals2::signal<void(void)>     signalOnConnect;
+        boost::signals2::signal<void(void)>     signalOnDisconnect;
+        boost::signals2::signal<void(string)>   signalOnError;
+        boost::signals2::signal<void(void)>     signalOnInterrupt;
+        boost::signals2::signal<void(void)>     signalOnPing;
+    
+        template<typename T, typename Y>
+        inline void addListener(T callback, Y *callbackObject) {
+            signalOnMessage.connect(std::bind(callback, callbackObject, std::placeholders::_1));
+        }
+    
+      protected:
+        string host;
+        bool bConnected;
+        void updatePubSub();
+    
+        Config config;
         
-        #ifdef SPACEBREW_USE_OFX_LWS
-            // websocket methods
-//            void onConnect( ofxLibwebsockets::Event& args );
-//            void onOpen( ofxLibwebsockets::Event& args );
-//            void onClose( ofxLibwebsockets::Event& args );
-//            void onIdle( ofxLibwebsockets::Event& args );
-//            void onMessage( ofxLibwebsockets::Event& args );
-//            void onBroadcast( ofxLibwebsockets::Event& args );
-            void                connect();
-            void                disconnect();
-        
-            void                onConnect();
-            void                onDisconnect();
-            void                onError( std::string msg );
-            void                onInterrupt();
-            void                onPing();
-            void                onRead( std::string msg );
-            void                write();
-        
-            void update();
-        #else
-        #endif
-        
-        protected:
-//            void update( ofEventArgs & e );
-        
-            string host;
-            bool bConnected;
-            void updatePubSub();
-        
-            Config config;
-            
-            // reconnect
-            bool bAutoReconnect;
-            int  lastTimeTriedConnect;
-            int  reconnectInterval;
-        
-    #ifdef SPACEBREW_USE_OFX_LWS
-            WebSocketClient     mClient;
-//            ofxLibwebsockets::Client client;
-    #else
-    #endif
+        // reconnect
+        bool bAutoReconnect;
+        int  lastTimeTriedConnect;
+        int  reconnectInterval;
+    
+        WebSocketClient		mClient;
     };
     
     /**
